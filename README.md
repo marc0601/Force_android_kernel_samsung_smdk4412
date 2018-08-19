@@ -1,0 +1,1 @@
+# RR7_android_kernel_samsung_smdk4412-RR
