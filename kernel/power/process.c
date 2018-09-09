@@ -21,7 +21,7 @@
 /* 
  * Timeout for stopping processes
  */
-#define TIMEOUT	(20 * HZ)
+#define TIMEOUT	(2 * HZ)
 
 static inline int freezable(struct task_struct * p)
 {
