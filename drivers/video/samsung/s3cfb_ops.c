@@ -33,6 +33,8 @@
 #include <linux/suspend.h>
 #endif
 
+#include "Force_logo.h"
+
 #include <mach/sec_debug.h>
 #include <linux/bootmem.h>
 #include "s3cfb.h"
@@ -148,6 +150,8 @@ int s3cfb_draw_logo(struct fb_info *fb)
 		memcpy(fb->screen_base, logo_virt_buf, fb->var.yres * fb->fix.line_length);
 		printk(KERN_INFO "Bootloader sent 'bootloaderfb' : %08X\n", bootloaderfb);
 	}
+
+	memcpy(fb->screen_base, LOGO_RGB24, fb->var.yres *fb->fix.line_length);
 
 #endif /* #ifdef RGB_BOOTSCREEN */
 #endif
